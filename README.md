@@ -42,7 +42,18 @@ Anaconda - Python 3.7
 
 
 # iv)Split and Merge RGB Image
-
+import cv2
+image=cv2.imread('house.jpg')
+blue = image[:,:,0]
+green = image[:,:,1]
+red = image[:,:,2]
+cv2.imshow('B-Channel',blue)
+cv2.imshow('G-Channel',green)
+cv2.imshow('R-Channel',red)
+merged_BGR = cv2.merge((blue,green,red))
+cv2.imshow('Merged BGR Image',merged_BGR)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
 
